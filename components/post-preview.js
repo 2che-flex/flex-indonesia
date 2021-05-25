@@ -1,5 +1,6 @@
 import Avatar from '../components/avatar'
 import Date from '../components/date'
+import Youtube from '../components/youtube-video'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 
@@ -10,6 +11,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  video
 }) {
   return (
     <div>
@@ -26,6 +28,15 @@ export default function PostPreview({
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
+      <video
+        src="https://drive.google.com/file/d/1xBv6PMm_B79_t3Supl83fWAZrcYMTf5z/view?usp=sharing"
+        autoPlay="autoplay"
+        loop="loop"
+        muted={true}
+        webkit-playsinline="true"
+        playsInline={true}
+      />
+      <Youtube videoUrl={video} />
     </div>
   )
 }

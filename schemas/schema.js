@@ -47,6 +47,11 @@ export default createSchema({
           type: 'image',
         },
         {
+          name: 'video',
+          title: 'Video URL',
+          type: 'string',
+        },
+        {
           name: 'date',
           title: 'Date',
           type: 'datetime',
@@ -77,5 +82,7 @@ export default createSchema({
         },
       ],
     },
+
   ]),
 })
+

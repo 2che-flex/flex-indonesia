@@ -11,6 +11,7 @@ import { getClient, overlayDrafts } from '../lib/sanity.server'
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
+  console.warn(allPosts,'INI ALLPOST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
   return (
     <>
       <Layout preview={preview}>
@@ -27,6 +28,7 @@ export default function Index({ allPosts, preview }) {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              video={heroPost.video}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
